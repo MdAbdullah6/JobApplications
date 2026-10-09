@@ -1,0 +1,15 @@
+@model JobTracker.Models.JobApplication
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete this application?</h1>
+<hr />
+<p><strong>@Model.CompanyName</strong> - @Model.JobTitle (@Model.Status)</p>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Yes, Delete</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>
